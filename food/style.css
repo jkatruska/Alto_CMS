@@ -1,0 +1,217 @@
+@font-face{
+    font-family: roboto;
+    src: url(font/Roboto-Regular.ttf);
+}
+@font-face{
+    font-family:robotoBold;
+    src:url(font/Roboto-Bold.ttf)
+}
+@font-face{
+    font-family:robotoLight;
+    src:url(font/Roboto-Light.ttf);
+}
+body{
+    margin:0;
+}
+p{
+    margin:0;
+}
+#jumbotron{
+    position:relative;
+    width:100%;
+}
+.jumbo_bg{
+    width:100%;
+    height:100vh;
+}
+.jumboheader{
+    position:absolute;
+    font-family:roboto;
+    text-transform: uppercase;
+    top:40%;
+    left:34%;
+    color:white;
+    text-align:center;
+    font-size:3vw;
+    text-shadow: 2px 2px 2px #000000;
+}
+.jumbo_arrow{
+    width:3%;
+    position: absolute;
+    top:90%;
+    left:49%;
+}
+#products{
+    width:80%;
+    overflow:hidden;
+    margin-top:5%;
+    margin-left: 10%;
+}
+#products .left{
+    width:30%;
+    float:left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#products .right{
+    width:30%;
+    float:left;
+    margin-left: 10%;
+}
+.product_img{
+    display:block;
+    margin:0 auto;
+    width: 18%;
+    margin-bottom: 2%;
+}
+.product_title{
+    font-family:roboto;
+    font-size:1.5vw;
+    text-align:center;
+    text-transform: uppercase;
+    margin-bottom: 2%;
+}
+.product_text{
+    font-family: robotoLight;
+    font-size: 0.9vw;
+    text-align: justify;
+    text-align-last: center;
+}
+.main_title{
+    width:100%;
+    text-align:center;
+    font-family:robotoBold;
+    font-size:2vw;
+    margin-top:3%;
+    text-transform: uppercase;
+    margin-bottom:3%;
+}
+#food_tiles{
+    overflow: hidden;
+    width: 80%;
+    margin-left: 10%;
+}
+.tile{
+    width:20%;
+    transition:all ease 0.5s;
+    float:left;
+}
+.tile_img{
+    display: block;
+    margin: 0 auto;
+    width: 35%;
+    background-color: #81cc68;
+    padding: 6%;
+    border-radius: 50%;
+}
+.tile_txt{
+    width:80%;
+    text-align:center;
+    color:#3a3a3a;
+    font-family:roboto;
+    padding-left:10%;
+    padding-right:10%;
+    font-size:1.1vw;
+    margin-top:9%;
+    padding-bottom:5%;
+}
+#food_posts{
+    margin-top: 3%;
+}
+.odd{
+    padding-left: 10%;
+    background-color: #F8F9FA;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    overflow:hidden;
+}
+.odd .content_blok{
+    width: 40%;
+    float: left;
+    margin-right: 5%;
+}
+.odd .content_title{
+    font-family: robotoLight;
+    font-size: 1.5vw;
+}
+.odd .content_text{
+    font-family: roboto;
+    font-size: 0.8vw;
+    text-align: justify;
+    text-align-last:left;
+    margin-top:1%;
+}
+.odd .content_img{
+    width: 40%;
+    float: left;
+}
+.even{
+    padding-left: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    overflow:hidden;
+}
+.even .content_blok{
+    width: 40%;
+    float: right;
+    margin-right: 15%;
+}
+.even .content_title{
+    font-family: robotoLight;
+    font-size: 1.5vw;
+}
+.even .content_text{
+    font-family: roboto;
+    font-size: 0.8vw;
+    text-align: justify;
+    text-align-last:left;
+    margin-top:1%;
+}
+.even .content_img{
+    width: 40%;
+    float: left;
+}
+#produkty{
+    background-color: #81CC68;
+    padding-top: 2%;
+    padding-bottom:2%;
+}
+h1{
+    color: white;
+    text-transform: uppercase;
+    font-family: robotoBold;
+    text-align: center;
+}
+table{
+    width: 80%;
+    margin-left: 10%;
+    border-collapse: collapse;
+}
+.popis{
+    color: white;
+    text-transform: uppercase;
+    font-family: roboto;
+    border-collapse: collapse;
+    font-size: 1.2vw;
+}
+thead tr th:nth-child(1){
+    background-color: #f1c40f;
+}
+thead tr th:nth-child(3){
+    background-color: #f39c12;
+}
+thead tr th:nth-child(5){
+    background-color: #e67e22;
+}
+thead tr th:nth-child(7){
+    background-color: #d35400;
+}
+tbody tr td:nth-child(1),tbody tr td:nth-child(3),tbody tr td:nth-child(5),tbody tr td:nth-child(7){
+    text-align: center;
+    background-color: white;
+    color:black;
+    font-family:roboto;
+}
+tbody tr td:nth-child(1){
+    width:25%;
+}

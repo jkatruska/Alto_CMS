@@ -1,0 +1,130 @@
+/* CSS Document */
+@font-face {
+    font-family: oswald-light;
+    src: url(font/Oswald-Light.ttf);
+}
+@font-face {
+    font-family: oswald-bold;
+    src: url(font/Oswald-Bold.ttf);
+}
+@font-face {
+    font-family: oswald-medium;
+    src: url(font/Oswald-Medium.ttf);
+}
+p{
+	margin:0;
+}
+.add{
+	background-color: #76b51b;
+    text-transform: uppercase;
+    font-family: oswald-bold;
+    color: white;
+    width: 8.5%;
+    display: block;
+    text-align: center;
+    padding: 0.3%;
+    border-radius: 5%;
+    text-decoration: none;	
+}
+.add:hover{
+    color: #76b51b;
+    background-color: white;
+}
+.function_name{
+	font-family: oswald-bold;
+    text-transform: uppercase;
+    font-size: 2vw;
+    margin-top: 2%;
+}
+.overview{
+	width: 98%;
+    margin-top: 2%;	
+	border-collapse: collapse;
+}
+.overview thead{
+	background-color:#76b51b;
+	color:white;
+	padding-left:0.2%;
+}
+.overview tbody{
+	background-color:white;	
+}
+.overview tbody tr td{
+	padding-left:0.2%;	
+}
+.overview tbody tr td:nth-child(5){
+	width:10%;
+	text-align:center;
+}
+.edit{
+	width:10%;
+	text-align:center;
+}
+.del{
+	width:10%;
+	text-align:center;
+}
+.form_backend{
+	display: inline-block;
+    margin-left: 30%;
+    background: white;
+    padding: 3%;
+    border: 2px solid #76b51b;
+    border-radius: 1%;
+    margin-top: 5%;
+	width:30%;
+}
+.polia{
+	margin-top:3%;
+}
+.input_backend{
+	border: 1px solid #76b51b;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2%;
+}
+.select_backend{
+	border:1px solid #76b51b;
+	width:100%;  
+    margin: 0;
+    margin-bottom: 2%;
+}
+.textarea_backend{
+	resize: none;
+    width: 100%;
+    border: 1px solid #76b51b;
+    height: 10vw;
+}
+.button_backend{
+	width:100%;
+	background-color:#76b51b;
+	border:none;
+	color:white;
+	text-transform:uppercase;
+	margin:0;
+}
+.output{
+	width: 26%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    color: green;
+    margin-top: 1%;
+    font-size: 1.5vw;
+}	
+.back{
+	margin-left: 46%;
+    display: block;
+    width: 3.2%;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    color: white;
+    background-color:#76b51b;
+    padding: 0.5%;
+    margin-top: 1%;
+    border-radius: 7%;
+    text-decoration: none;	
+}
+.back:hover{
+	color:#76b51b;
+	background-color:white;
+}

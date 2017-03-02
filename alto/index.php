@@ -1,6 +1,3 @@
-<?php 
-            require_once realpath(__DIR__ ) . "/admin/core/init.php";
-?>
 <!doctype html>
 <html>
 <head>
@@ -13,10 +10,12 @@
 
 <body>
 	<?php 		
-        $notification = new Post();
-        $notifications = $notification->get('notifications');
-        if ($notifications->count() > 0){
-            $results = $notifications->results();
+        require_once realpath(__DIR__ . '/..') . "/admin/core/init.php";
+
+        $notification = new Notification();
+        $notifications = $notification->get();
+        if ($notification->count() > 0){
+            $results = $notification->results();
         ?>
 				<div class="oznamy_bg">
                     <div class="oznamy_wrapper">

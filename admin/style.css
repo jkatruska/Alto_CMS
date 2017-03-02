@@ -1,0 +1,269 @@
+@font-face {
+    font-family: roboto-light;
+    src: url(font/Roboto-Light.ttf)
+}
+@font-face {
+    font-family: roboto-bold;
+    src:url(font/Roboto-Bold.ttf)
+}
+@font-face {
+    font-family: roboto-regular;
+    src:url(font/Roboto-Regular.ttf);
+}
+p{
+    margin:0;
+}
+*:focus {
+    outline: none;
+}
+body{
+    margin:0;
+    font-family: roboto;
+}
+#wrapper_login{
+    background-image: url("img/background.jpg");
+    height:100%;
+}
+#login_text{
+    text-align: center;
+    font-size: 1.5vw;
+    color: white;
+    text-transform: uppercase;
+}
+#login_form{
+    background-color: rgba(0,0,0,0.5);
+    width:30%;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding:3%;
+}
+.input_login{
+    display:block;
+    margin:0 auto;
+    background-color: transparent;
+    border: 3px solid white;
+    width: 70%;
+    border-radius: 5px;
+    line-height: 3;
+    color: white;
+    padding-left: 2%;
+}
+#login_button{
+    float: left;
+    width: 30%;
+    border: none;
+    text-transform: uppercase;
+    background-color: #4D9A3A;
+    border-radius: 2px;
+    margin-left: 15%;
+    padding:0;
+}
+#reset_button{
+    width: 30%;
+    border: none;
+    text-transform: uppercase;
+    background-color: #C1392B;
+    border-radius: 2px;
+    padding: 0;
+    margin-right: 15%;
+}
+
+/*index*/
+#wrapper_index{
+    width:100%;
+    height:100%;
+}
+#top_menu{
+    position: fixed;
+    background-color: #313131;
+    height: 4%;
+    width: 100%;
+}
+.logout{
+    margin:0;
+    float:right;
+    color:white;
+    text-decoration: none;
+    line-height: 2;
+}
+.logout a{
+    color: white;
+    text-decoration: none;
+    margin-right: 10%;
+    margin-left: 6%;    
+}
+.logout a:visited{
+    color:white;
+}
+#left_menu{
+    position:fixed;
+    background-color: #34495e;
+    width:15%;
+    height:100%;
+}
+#left_menu ul{
+    list-style-type:none;
+    color:white;
+    text-transform:uppercase;
+    padding:0;
+}
+.alto{
+    margin-top:15%;
+}
+#left_menu ul li{
+    line-height:2;
+    padding-left:10%;
+}
+#left_menu ul a li:hover{
+    border-left: 5px solid #E89B01;
+}
+li.header{
+    font-size:1.3vw;
+}
+li.header:hover{
+    background-color: none;
+}
+ul a{
+    text-decoration:none;
+    color:white;
+}
+li a:visited{
+    color:inherit;
+    text-decoration:none;
+}
+.back_content{
+    margin-left: 15%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    min-height: 98%;
+    background-color: aliceblue;
+}
+.warning{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20%;
+    font-size: 28px;
+}
+.warning a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #375fd4
+}
+.warning a:visited{
+    color:#375fd4;
+}
+.warning a:hover{
+    text-decoration:underline;
+}
+/*insert*/
+
+.insert{
+    margin-left: 20%;
+    margin-top: 8%;
+    background-color: white;
+    width: 60%;
+    padding: 2%;
+    border-radius: 8px;
+}
+.insert form{
+    display:block;
+    margin:0 auto;
+}
+.insert_input{
+    line-height: 2;
+    padding-left: 2%;
+    width: 100%;
+    margin-bottom: 2%;
+    border: 0;
+    border-bottom: 1px solid gray;
+}
+.insert_input:focus{
+    border-bottom:1px solid black;
+}
+.insert textarea{
+    width: 100%;
+    padding-left: 2%;
+    height: 25%;
+    resize: none;
+    border:0;
+}
+.confirm_button{
+    border: none;
+    text-transform: uppercase;
+    background-color: #4D9A3A;
+    border-radius: 2px;
+    color: white;
+    padding: 1%;
+    width: 13%;
+}
+.status{
+    text-align: center;
+    color:red;
+}
+
+/*get*/
+
+.get table{
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5Px;
+    padding: 2%;
+    width: 90%;
+    margin-top: 2%;
+}
+.get table tr td{
+    border-bottom: 1px solid gray;
+    padding-bottom: 1%;
+}
+.get table tr td:hover
+{
+    border-bottom:1px solid black;
+}
+.get table tr td a {
+    color:black;
+    text-decoration: none;
+}
+.get table tr td a:hover {
+    text-decoration: underline;
+}
+.content{
+    color:gray;
+    font-size:14px;
+}
+.title{
+    font-weight: bold;
+}
+h2{
+    margin-left:5%;
+}
+.addButton{
+    width: 9%;
+    border: none;
+    text-transform: uppercase;
+    background-color: #4D9A3A;
+    border-radius: 2px;
+    margin-left: 5%;
+    padding: 0.5%;
+    color: white;
+    margin-top: 2%;
+    text-align: center;
+}
+.href_addButton{
+    text-decoration:none;
+}
+.delete_button{
+    border: none;
+    text-transform: uppercase;
+    background-color: #C1392B;
+    border-radius: 2px;
+    color: white;
+    padding: 1%;
+    width: 10%;
+    float: right;
+    text-align: center;
+    cursor: default;
+    font-size: 14px;
+    margin-top:-3%;
+}
