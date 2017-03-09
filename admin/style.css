@@ -283,6 +283,7 @@ h2{
     float: left;
     opacity: 0.5;
     width: 15%;
+    transition: 0.5s ease all;
 }
 .wrapper_post:hover .img_post{
     opacity: 1;
@@ -322,11 +323,13 @@ h2{
     width:100%;
 }
 .customer_txt{
-    background-color: red;
+    background-color: rgba(23, 70, 157, 0.7);
     position: absolute;
-    bottom:0;
-    width:100%;
-    text-align:center;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
 }
 .delete_customer{
     width:100%;

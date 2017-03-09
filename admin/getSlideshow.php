@@ -15,7 +15,7 @@ else{
     <?php
     foreach($posts as $single){
         echo'
-        <a href="?updateSlideshow&id='.$single->id.'">
+        <a href="?page=updateSlideshow.php&id='.$single->id.'">
             <div class="wrapper_post">
                 <img src="../'.$single->image.'" class="img_post">
                 <div class="txt_post">

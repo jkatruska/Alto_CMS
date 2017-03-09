@@ -8,12 +8,12 @@ $posts = $post->get($table);
 
 <div class="get">
 <?php if($posts->count()<=0){
-    echo '<p class="warning">Nič tu nie je!<br><a href="?page=insertCustomers.php">Pridať záznam</a></p>';
+    echo '<p class="warning">Nič tu nie je!<br><a href="?page=insertCustomer.php">Pridať záznam</a></p>';
 }
 else{
     $posts = $posts->results();
         ?>
-    <a href="?page=insertCustomers.php" class="href_addButton"><div class="addButton">Pridať zákaznika</div></a>
+    <a href="?page=insertCustomer.php" class="href_addButton"><div class="addButton">Pridať zákaznika</div></a>
     <?php
     echo '<div class="wrapper_customers">';
     foreach($posts as $single){

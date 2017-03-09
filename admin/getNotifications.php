@@ -16,7 +16,7 @@ else{
     <?php
     foreach($posts as $single){
         echo'
-        <a href="?updateNotification&id='.$single->id.'">
+        <a href="?page=updateNotification&id='.$single->id.'">
             <div class="wrapper_post">
                 <div class="txt_post" style="padding-left: 2%; padding-bottom:1%;">
                     <p class="title_post">'.$single->content.'</p>

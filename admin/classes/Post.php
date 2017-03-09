@@ -26,8 +26,9 @@
             else{
                 $tmp_name = $image["tmp_name"];
                 $filepath = "img/upload/";
-                $name = basename($image["name"]); 
-                $name = removechar($name); 
+                $ext = pathinfo($image["name"])['extension'];
+                $name = self::randomString(5);
+                $name .= '.'.$ext;
                 $dest = $filepath.$name;
                 if(move_uploaded_file($tmp_name, $dest)){
                    return $dest = "admin/".$dest;
@@ -40,7 +41,7 @@
               return $actual_path;
           }
           else{
-              self::addImage($image);
+              return self::addImage($image);
           }
         }
         public function delete($table,$where){
@@ -51,6 +52,18 @@
         }
         public function deleteImage($path){
             unlink($path);
+        }
+        public function croppedImage($image,$width = 800, $height = 800){
+            
+        }
+        public function randomString($length) {
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $charactersLength = strlen($characters);
+            $randomString = '';
+            for ($i = 0; $i < $length; $i++) {
+                $randomString .= $characters[rand(0, $charactersLength - 1)];
+            }
+            return $randomString;
         }
     }
 
