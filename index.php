@@ -25,7 +25,7 @@
                         <div class="oznamy">
                         <?php				
                             foreach($results as $result){
-                                echo '<p>'.nl2br($result->popis).'</p>';
+                                echo '<p>'.nl2br($result->content).'</p>';
                             }
                         ?>
                        </div>
@@ -60,24 +60,47 @@
                     </ul>
                 </div>
             </div>
-            <div id="tw">
-            	<a href="/teamviewer.exe">
-                    <p class="tw_text">Stiahnuť Teamviewer</p>
-                    <img src="images/teamviewer.svg" class="tw_logo">
-                </a>
-            </div>
         </div>
         <div id ="jumbotron">  
-	        <?php if( function_exists('cyclone_slider') ) cyclone_slider('28'); ?>	
-            <a href="#about_us">
+            <img src="images/slideshow_arrow.svg" class="arrow-next">
+            <img src="images/slideshow_arrow.svg" class="arrow-prev">
+	        <div id="slideshow">
+                <?php 
+                $image = new Post();
+                $images = $image->get('slideshow');
+                $results = $images->results();
+                $i = 0;
+                $len = count($results);
+                foreach ($results as $result){
+                    if($i == 0){
+                    echo '<div class="slide active-slide" style="display:block">
+                            <img src="'. $result->image . '">
+                            <p class="main_text">'.$result->title .'</p>
+                            <p class="secondary_text">'.$result->content .'</p>
+                         </div>';
+                    }
+                    else{
+                        echo '<div class="slide" style="display:none">
+                            <img src="'. $result->image . '">
+                            <p class="main_text">'.$result->title .'</p>
+                            <p class="secondary_text">'.$result->content .'</p>
+                         </div>';
+                    }
+                    $i++;
+                }
+                ?>
+            </div>
+            <a href="#products">
             <img src="images/jumbo_arrow.svg" class="jumbo_arrow">
             </a>
         </div>
+        <!--
         <div id="about_us">
         	<p class="about_title">Alto Slovakia s.r.o</p>
             <div class="short_line"></div>
             <p class="about_content">Už 25 rokov hrdým dodávateľom reštauračného a hotelového systému</p>
         </div>
+        -->
         <div id="products">
         	<div class="container_product">
             	<div class="product_blok">
@@ -242,6 +265,6 @@ Používajte počítačovú registračnú pokladňu s prepojením na vernostný 
     </div>
 <script src="jquery.js"></script>
 <script src="features.js"></script>
-
+<script src="slideshow.js"></script>
 </body>
 </html>

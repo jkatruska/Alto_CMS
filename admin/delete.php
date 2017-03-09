@@ -1,8 +1,18 @@
 <?php 
     $post = new Post();
-    $table=$_GET["table"];
     $id = $_GET["id"];
-    $post->delete($table,array('id','=',$id));
+    $table=$_GET["table"];
+    $from = $_GET["from"];
+    $image = $post->get($table, array('id','=',$id))->results();
+    if($image[0]->image){
+        $path = '../'.$image[0]->image;
+        $post->deleteImage($path);
+    }
+    if($post->delete($table,array('id','=',$id))){
+        echo 'success';
+    }
+    else 
+        echo 'fail';
     Session::flash('admin_home', 'Záznam vymazaný');
-    Redirect::to('index.php');
+    Redirect::to('?page='.$from);
     ?>

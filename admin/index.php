@@ -21,7 +21,11 @@ else{
             <ul class="alto">
                 <li class="header">ALTO</li>
                 <a href="?page=getPost.php&category=1"><li>Články</li></a>
-                <a href="?page=getCalendar.php"><li>Semináre</li></a>
+                <a href="?page=getCalendar.php"><li>Semináre</li></a>                
+                <a href="?page=getSlideshow.php"><li>Slideshow</li></a>
+                <a href="?page=getCustomers.php"><li>Zákaznici</li></a>
+                <a href="?page=getNotifications.php"><li>Oznamy</li></a>
+
             </ul>
             <ul class="food">
                 <li class="header">Food</li>

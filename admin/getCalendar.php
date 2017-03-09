@@ -4,7 +4,6 @@ $food = new Post();
 $cal_food = $food->get('calendar', array('product','=','food'));
 $hores = new Post();
 $cal_hores = $hores->get('calendar', array('product','=','hores'));
-var_dump($cal_food);
 ?>
 
 <div class="get">

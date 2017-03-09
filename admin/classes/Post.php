@@ -40,14 +40,7 @@
               return $actual_path;
           }
           else{
-              $tmp_name = $image["tmp_name"];
-              $filepath = "img/upload/";
-              $name = basename($image["name"]); 
-              $name = removechar($name); 
-              $dest = $filepath.$name;
-              if(move_uploaded_file($tmp_name, $dest)){
-                return $dest = "admin/".$dest;
-              }
+              self::addImage($image);
           }
         }
         public function delete($table,$where){
@@ -55,6 +48,9 @@
                 return true;
             else
                 return false;
+        }
+        public function deleteImage($path){
+            unlink($path);
         }
     }
 

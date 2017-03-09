@@ -1,6 +1,6 @@
 <?php 
-			$calendar = new Calendar();
-			$results = $calendar->query("SELECT     cats.name AS cat_name,
+			$products = new Post();
+			$results = $products->query("SELECT     cats.name AS cat_name,
 												p.popis AS popis,
 												p.one AS one,
 												p.mid AS mid,
