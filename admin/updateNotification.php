@@ -5,34 +5,27 @@
  }
  else{
 $id = $_GET["id"];
-$table = 'posts';
+$table = 'notifications';
 $post = new Post();
+$from = 'getNotifications.php';
 $single = $post->get($table, array('id','=',$id))->results();
-$category = $single[0]->category;
-$from = 'getPost.php&category='.$category;
 
 if(Input::exists()){
     if(Token::check(Input::get('token'))){
          $validate = new Validate();
          $validation = $validate->check($_POST, array(
-             'text' => array(
-                 'name' => 'Obsah',
-                 'required' => true),
-             'title' =>array(
-                 'name' => 'Titulok',
-                 'required' => true,
-                 'max' => 90
-             )));
+             'content' => array(
+                 'name' => 'Oznam',
+                 'required' => true)));
           if($validation->passed()){
-              $image = $post->updateImage($_FILES['image'], $single[0]->image);
+              $post = new Post();
+              $image = $post->updateImage($_FILES["image"],$single[0]->image);
               try{
-                  $post->update($table,$id, array(
-                      'content'=>Input::get('text'),
-                      'title' =>Input::get('title'),
-                      'image' => $image
+                  $post->update('notifications',$id,array(
+                      'content'=>Input::get('content'),
                   ));
-                  Session::flash('status', 'Záznam úspešne upravený');
-                  Redirect::to('?page=updatePost.php&id='.$id);
+                  Session::flash('status', 'Záznam úspešne zmenený');
+                  Redirect::to('?page=updateNotification.php&id='.$id);
               }
               catch(Exception $e){
                   die($e->getMessage());
@@ -48,9 +41,7 @@ if(Input::exists()){
 
  <div class="insert">
     <form action ="" method="POST" enctype="multipart/form-data">
-        <input type="text" name="title" placeholder="Titulok" class="insert_input" autocomplete="off" value="<?php  echo escape($single[0]->title) ?>"><br>
-        <textarea name="text" id="text" placeholder="Popis"><?php echo escape($single[0]->content)?></textarea><br>
-        <input type="file" name="image" ><br /><br>
+        <input type="text" name="content" placeholder="Oznam" class="insert_input" autocomplete="off" value="<?= $single[0]->content?>"><br>
         <input type="hidden" name="token" value="<?php echo Token::generate() ?>">
         <input type="submit" value="Zmeniť" class="confirm_button">
         <?php 

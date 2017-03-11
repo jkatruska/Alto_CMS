@@ -10,6 +10,7 @@ if(!$user->isLoggedIn()){
 }
 else{
 ?>
+
 <head>
     <title>CMS Alto</title>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -31,7 +32,7 @@ else{
                 <li class="header">Food</li>
                 <a href="?page=getPost.php&category=2"><li>Články Food</li></a>
                 <a href="?page=getPost.php&category=3"><li>Články Kasa</li></a>
-                <li>Produkty</li>
+                <a href="?page=getProducts.php"><li>Produkty</li></a>
             </ul>
             <ul class="hores">
                 <li class="header">Hores
@@ -51,6 +52,9 @@ else{
                 ?>
         </div>
     </div>
+    <script src="jquery.js"></script>
+    <script src="form.js"></script>
+
 <?php 
 }
 ?>

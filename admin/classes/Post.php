@@ -5,6 +5,12 @@
             $this->_db = DB::getInstance();
         }
         public function create($table,$fields){
+            foreach($fields as $key =>$value){
+                if($value!=NULL){
+                $new_value = strip_tags($value,"<b><i><ul><li><br>");
+                $fields[$key] = $new_value;
+                }
+            }
             return $this->_db->insert($table,$fields);
         }
         public function update($table,$id, $fields = array()){
@@ -53,9 +59,7 @@
         public function deleteImage($path){
             unlink($path);
         }
-        public function croppedImage($image,$width = 800, $height = 800){
-            
-        }
+
         public function randomString($length) {
             $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
             $charactersLength = strlen($characters);

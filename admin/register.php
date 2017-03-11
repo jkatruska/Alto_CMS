@@ -1,16 +1,10 @@
 <?php 
     require_once 'core/init.php';
-header('Content-type: text/html; charset=utf-8');
-?>
-<!DOCTYPE>
-<html>
-    <head>
-        <title>Registrácia nového užívateľa</title>
-        <meta charset="utf-8">
-    </head>
-<body>
-
-<?php
+     $user = new User();
+ if (!$user->isLoggedIn() ){
+     Redirect::to('includes/errors/restricted.php');
+ }
+ else{
 if(Input::exists()){
     if(Token::check(Input::get('token'))){
         $validate = new Validate();
@@ -80,5 +74,4 @@ if(Input::exists()){
     <input type="hidden" name="token" value="<?php echo Token::generate() ?>">
     <input type="submit" value="Zaregistrovať">
 </form>
-</body>
-</html>
+ <?php } ?>

@@ -22,24 +22,24 @@ p{
 }
 .jumbo_bg{
     width:100%;
-    height:100vh;
+    height:50vh;
+    overflow: hidden;
+}
+.jumbo_bg img{
+    object-fit: cover;
+    height: inherit;
+    width: inherit;
 }
 .jumboheader{
     position:absolute;
     font-family:roboto;
     text-transform: uppercase;
     top:40%;
-    left:34%;
+    width:100%;
     color:white;
     text-align:center;
     font-size:3vw;
     text-shadow: 2px 2px 2px #000000;
-}
-.jumbo_arrow{
-    width:3%;
-    position: absolute;
-    top:90%;
-    left:49%;
 }
 #products{
     width:80%;
@@ -114,6 +114,7 @@ p{
     font-size:1.1vw;
     margin-top:9%;
     padding-bottom:5%;
+    min-height: 5%;
 }
 #food_posts{
     margin-top: 3%;
@@ -211,7 +212,44 @@ tbody tr td:nth-child(1),tbody tr td:nth-child(3),tbody tr td:nth-child(5),tbody
     background-color: white;
     color:black;
     font-family:roboto;
+    width:22%;
 }
 tbody tr td:nth-child(1){
-    width:25%;
+    width:30%;
+}
+
+@media screen and (max-width: 425px){
+    .jumbo_bg{
+        height:20vh;
+    }
+    #products .left{
+        float:none;
+        width:80%;
+    }
+    #products .right{
+        float:none;
+        width:80%;
+    }
+    .product_img{
+        width:10%;
+    }
+    .product_title{
+        font-size:3vw;
+    }
+    .product_text{
+        font-size:1.5vw;
+    }
+    .main_title{
+        font-size:3vw;
+    }
+    .tile{
+        width:33%;
+    }
+    .tile_txt{
+        font-size:2.1vw;
+    }
+    .tile:last-child{
+        margin: 0 auto;
+        float:none;
+    }
 }

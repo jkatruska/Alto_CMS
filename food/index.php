@@ -7,13 +7,15 @@
         <Title>Foodman</Title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div id="wrapper">
             <div id="jumbotron">
-                <img src="img/jumbotron.png" class="jumbo_bg">
+                <div class="jumbo_bg">
+                    <img src="img/jumbotron.png">
+                </div>
                 <p class="jumboheader">Reštauračný systém<br> FOODMAN</p>
-                <img src="img/jumbo_arrow.svg" class="jumbo_arrow">
             </div>
             <div id="products">
                 <div class="left">

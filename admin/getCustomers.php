@@ -1,5 +1,10 @@
 <?php 
 require_once 'core/init.php';
+ $user = new User();
+ if (!$user->isLoggedIn() ){
+     Redirect::to('includes/errors/restricted.php');
+ }
+ else{
 $table = 'customers';
 $from = 'getCustomers.php';
 $post = new Post();
@@ -30,3 +35,4 @@ else{
 echo '</div>';
 ?>
 </div>
+ <?php } ?>

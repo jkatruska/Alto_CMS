@@ -1,5 +1,10 @@
 <?php 
 require_once 'core/init.php';
+ $user = new User();
+ if (!$user->isLoggedIn() ){
+     Redirect::to('includes/errors/restricted.php');
+ }
+ else{
 $category = $_GET["category"];
 $post = new Post();
 $posts = $post->get('posts', array('category','=',$category));
@@ -29,3 +34,4 @@ else{
     </table>
 <?php } ?>
 </div>
+ <?php } ?>

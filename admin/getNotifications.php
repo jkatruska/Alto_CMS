@@ -1,5 +1,10 @@
 <?php 
 require_once 'core/init.php';
+ $user = new User();
+ if (!$user->isLoggedIn() ){
+     Redirect::to('includes/errors/restricted.php');
+ }
+ else{
 $table = 'notifications';
 $post = new Post();
 $posts = $post->get($table);
@@ -16,7 +21,7 @@ else{
     <?php
     foreach($posts as $single){
         echo'
-        <a href="?page=updateNotification&id='.$single->id.'">
+        <a href="?page=updateNotification.php&id='.$single->id.'">
             <div class="wrapper_post">
                 <div class="txt_post" style="padding-left: 2%; padding-bottom:1%;">
                     <p class="title_post">'.$single->content.'</p>
@@ -26,3 +31,4 @@ else{
     }
 } ?>
 </div>
+ <?php } ?>

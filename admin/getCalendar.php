@@ -1,5 +1,10 @@
 <?php 
 require_once 'core/init.php';
+ $user = new User();
+ if (!$user->isLoggedIn() ){
+     Redirect::to('includes/errors/restricted.php');
+ }
+ else{
 $food = new Post();
 $cal_food = $food->get('calendar', array('product','=','food'));
 $hores = new Post();
@@ -59,3 +64,4 @@ else{
     </table>
 <?php } }?>
 </div>
+ <?php } ?>

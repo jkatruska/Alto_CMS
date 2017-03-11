@@ -1,5 +1,10 @@
 <?php 
 require_once 'core/init.php';
+ $user = new User();
+ if (!$user->isLoggedIn() ){
+     Redirect::to('includes/errors/restricted.php');
+ }
+else{
 $post = new Post();
 $posts = $post->get('slideshow');
 ?>
@@ -27,3 +32,5 @@ else{
     }
 } ?>
 </div>
+
+ <?php } ?>

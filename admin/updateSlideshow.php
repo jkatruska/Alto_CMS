@@ -1,4 +1,9 @@
 <?php require_once 'core/init.php';
+ $user = new User();
+ if (!$user->isLoggedIn() ){
+     Redirect::to('includes/errors/restricted.php');
+ }
+ else{
 $id = $_GET["id"];
 $table = 'slideshow';
 $post = new Post();
@@ -58,3 +63,4 @@ if(Input::exists()){
         }
     ?>
 </div>
+ <?php } ?>
