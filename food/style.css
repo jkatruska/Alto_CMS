@@ -12,9 +12,14 @@
 }
 body{
     margin:0;
+    font-family:roboto;
 }
 p{
     margin:0;
+}
+a{
+    color: inherit;
+    text-decoration: none;
 }
 #jumbotron{
     position:relative;
@@ -40,6 +45,30 @@ p{
     text-align:center;
     font-size:3vw;
     text-shadow: 2px 2px 2px #000000;
+}
+.menu{
+    position: absolute;
+    width: 97%;
+    padding-left: 3%;
+    padding-top: 0.5%;
+}
+.fixed_menu{
+    position: fixed;
+    width: 97%;
+    padding-left: 3%;
+    padding-top: 0.5%;
+    background: #81cc68;
+    padding-bottom: 1.1%;
+    z-index: 999;
+    border-bottom: 2px solid #75b75f;
+}
+.menu ul li{
+    list-style-type: none;
+    float:left;
+    color:white;
+    margin-right:2%;
+    text-transform: uppercase;
+    font-size:0.9vw;
 }
 #products{
     width:80%;
@@ -91,6 +120,11 @@ p{
     width: 80%;
     margin-left: 10%;
 }
+#cash_tiles{
+    overflow: hidden;
+    width: 80%;
+    margin-left: 10%;
+}
 .tile{
     width:20%;
     transition:all ease 0.5s;
@@ -114,7 +148,7 @@ p{
     font-size:1.1vw;
     margin-top:9%;
     padding-bottom:5%;
-    min-height: 5%;
+    min-height: 6%;
 }
 #food_posts{
     margin-top: 3%;
@@ -132,7 +166,7 @@ p{
     margin-right: 5%;
 }
 .odd .content_title{
-    font-family: robotoLight;
+    font-family: robotoBold;
     font-size: 1.5vw;
 }
 .odd .content_text{
@@ -158,7 +192,7 @@ p{
     margin-right: 15%;
 }
 .even .content_title{
-    font-family: robotoLight;
+    font-family: robotoBold;
     font-size: 1.5vw;
 }
 .even .content_text{
@@ -252,4 +286,99 @@ tbody tr td:nth-child(1){
         margin: 0 auto;
         float:none;
     }
+    .content_img{
+        display:none;
+    }
+    .odd .content_blok{
+        width:90%;
+    }
+    .odd .content_title{
+        font-size:3vw;
+    }
+    .odd .content_text{
+        font-size:2vw;
+    }
+    .even{
+        padding-left:0;
+    }
+    .even .content_blok{
+        width: 90%;
+        text-align: left;
+        margin-right: 0;
+    }
+    .even .content_title{
+        font-size:3vw;
+    }
+    .even .content_text{
+        font-size:2vw;
+        text-align: left;
+        text-align-last: left;
+    }
+    h1{
+        font-size:4vw;
+    }
+    .popis{
+        font-size:3vw;
+    }
+    tbody tr td:nth-child(1), tbody tr td:nth-child(3), tbody tr td:nth-child(5), tbody tr td:nth-child(7) {
+        font-size:2.5vw;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width:800px){
+    #products{
+        width:100%;
+        margin-left:0;
+    }
+    #products .left{
+        width:40%;
+        margin-left:7.5%;
+        margin-right:2.5%;
+    }
+    #products .right{
+        width:40%;
+        margin-left:2.5%;
+        margin-right:7.5%;
+    }
+    .product_title{
+        font-size:2vw;
+    }
+    .product_text{
+        font-size:1.2vw;
+    }
+    #food_tiles{
+        width:85%;
+        margin-left:7.5%;
+    }
+    .tile{
+        width:25%;
+    }
+    .tile_txt{
+        font-size:1.3vw;
+    }
+    .tile_img{
+        width:40%
+    }
+    h1{
+        font-size:3vw;
+    }
+    .popis{
+        font-size:1.5vw;
+    }
+    tbody tr td:nth-child(1), tbody tr td:nth-child(3), tbody tr td:nth-child(5), tbody tr td:nth-child(7) {
+        font-size:1.5vw;
+    }
+    .odd .content_title{
+        font-size:2vw;
+    }
+    .odd .content_text{
+        font-size:1.2vw;
+    }
+    .even .content_title{
+        font-size:2vw;
+    }
+    .even .content_text{
+        font-size:1.2vw;
+    }
+
 }

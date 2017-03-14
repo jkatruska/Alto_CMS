@@ -19,3 +19,8 @@ function removechar($string){
     $string = strtr($string, $table);
     return $string;
 }
+
+function br2nl($string)
+{
+    return preg_replace('/\<br(\s*)?\/?\>/i', "\n", $string);
+}

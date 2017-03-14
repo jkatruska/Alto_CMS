@@ -28,16 +28,4 @@ $('#italic').click(function(){
     bold_status = 0;
   }
 });
-$('#textDiv').keyup(function(){
-  var value = $('#text').html($('#textDiv').text());
-  $('#textDiv').html(value);
-});
-/*
-$('#textDiv').keypress(function(e){
-  if(e.keyCode === 13 ){
-    document.execCommand('insertHTML', false, '<br><br>');
-    //$('#textDiv').text($('#textDiv').text() + '<br>');
-    return false;
-  }
-});
-*/
+

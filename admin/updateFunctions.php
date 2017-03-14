@@ -1,39 +1,38 @@
-<?php 
-require_once 'core/init.php';
+<?php require_once 'core/init.php';
  $user = new User();
  if (!$user->isLoggedIn() ){
      Redirect::to('includes/errors/restricted.php');
  }
  else{
+$id = $_GET["id"];
+$table = 'functions';
+$post = new Post();
+$from = 'getFunctions.php';
+$single = $post->get($table, array('id','=',$id))->results();
+
 if(Input::exists()){
     if(Token::check(Input::get('token'))){
          $validate = new Validate();
          $validation = $validate->check($_POST, array(
              'text' => array(
-                 'name' => 'Obsah',
+                 'name' => 'Popis Funkcie',
                  'required' => true),
              'title' =>array(
-                 'name' => 'Titulok',
+                 'name' => 'Funkcia',
                  'required' => true,
-                 'max' => 90
+                 'max' => 100
              )));
           if($validation->passed()){
               $post = new Post();
-              $image = $post->addImage($_FILES["image"]);
-              $category = $_GET['category'];
+              $image = $post->updateImage($_FILES["image"],$single[0]->image);
               try{
-                  $valid = $post->create('posts',array(
-                      'content'=>Input::get('text'),
-                      'title' =>Input::get('title'),
-                      'category' => $category,
+                  $post->update('functions',$id,array(
+                      'text'=>Input::get('text'),
+                      'name' =>Input::get('title'),
                       'image' => $image
                   ));
-                  if($valid){
-                    Session::flash('status', 'Záznam úspešne pridaný');
-                  }
-                  else{
-                      var_dump($valid);
-                  }
+                  Session::flash('status', 'Záznam úspešne zmenený');
+                  Redirect::to('?page=updateFunctions.php&id='.$id);
               }
               catch(Exception $e){
                   die($e->getMessage());
@@ -49,18 +48,16 @@ if(Input::exists()){
 
  <div class="insert">
     <form action ="" method="POST" enctype="multipart/form-data">
-        <input type="text" name="title" placeholder="Titulok" class="insert_input" autocomplete="off"><br>
-        <!--
-        <div class="interface">
-            <img src="img/bold.svg" class="button" id="bold">
-            <img src="img/italic.svg" class="button" id="italic">
-            <img src="img/u_list.svg" class="button" id="u_list">
-        </div>
-        -->
-        <textarea name="text" id="text" placeholder="Popis"></textarea><br>
+        <input type="text" name="title" placeholder="Funkcia" class="insert_input" autocomplete="off" value="<?= $single[0]->name ?>"><br>
+        <textarea name="text" id="text" placeholder="Popis funkcie"><?= br2nl($single[0]->text) ?></textarea><br>
         <input type="file" name="image" accept="image/*" ><br /><br>
         <input type="hidden" name="token" value="<?php echo Token::generate() ?>">
-        <input type="submit" value="Pridať" class="confirm_button">
+        <input type="submit" value="Zmeniť" class="confirm_button">
+        <?php 
+            echo '<a href="?page=delete.php&table='.$table.'&id='. $id. '&from='.$from.'">'
+        ?>
+            <div class="delete_button">Vymazať</div>
+            </a>
     </form>
     <?php 
         if(Session::exists('status')){
@@ -68,5 +65,4 @@ if(Input::exists()){
         }
     ?>
 </div>
-
  <?php } ?>

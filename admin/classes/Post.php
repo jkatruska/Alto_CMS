@@ -7,6 +7,7 @@
         public function create($table,$fields){
             foreach($fields as $key =>$value){
                 if($value!=NULL){
+                $value = nl2br($value);
                 $new_value = strip_tags($value,"<b><i><ul><li><br>");
                 $fields[$key] = $new_value;
                 }

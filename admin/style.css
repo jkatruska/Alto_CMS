@@ -260,7 +260,6 @@ h2{
     text-align: center;
     cursor: default;
     font-size: 14px;
-    margin-top:-3%;
 }
 
 .wrapper_post{
@@ -371,12 +370,13 @@ h1{
     font-family:roboto;
     border:0;
     padding:0;
+    width:22%;
 }
 .products tr td:hover{
     border:none;
 }
 .products tbody tr td:nth-child(1){
-    width:25%;
+    width:30%;
 }
 .clear{
     clear: both;

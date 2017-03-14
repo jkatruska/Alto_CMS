@@ -1,0 +1,234 @@
+@font-face{
+    font-family: roboto;
+    src: url(../font/Roboto-Regular.ttf);
+}
+@font-face{
+    font-family:robotoBold;
+    src:url(../font/Roboto-Bold.ttf)
+}
+@font-face{
+    font-family:robotoLight;
+    src:url(../font/Roboto-Light.ttf);
+}
+body{
+    margin: 0;
+    font-family:roboto;
+}
+p{
+    margin:0;
+}
+a{
+    color:inherit;
+    text-decoration: inherit;
+}
+.menu{
+    position: absolute;
+    width: 97%;
+    padding-left: 3%;
+    padding-top: 0.5%;
+    color:white;
+    text-decoration:none;
+    transition:all ease 0.5s;
+}
+.fixed_menu{   
+    position: fixed;
+    width: 97%;
+    padding-left: 3%;
+    padding-top: 0.5%;
+    background: #FFD500;
+    padding-bottom: 1.1%;
+    z-index: 999;
+    border-bottom: 2px solid #dcb800;    
+}
+.menu ul li{
+    list-style-type: none;
+    float:left;
+    color:white;
+    margin-right:2%;
+    text-transform: uppercase;
+    font-size:0.9vw;
+}
+.hover:hover{
+    color:#b55900;
+}
+#jumbotron{
+    position:relative;
+    width:100%;
+}
+.jumbo_bg{
+    width:100%;
+    height:50vh;
+    overflow: hidden;
+}
+.jumbo_bg img{
+    object-fit: cover;
+    height: inherit;
+    width: inherit;
+}
+.jumboheader{
+    position:absolute;
+    font-family:roboto;
+    text-transform: uppercase;
+    top:40%;
+    width:100%;
+    color:white;
+    text-align:center;
+    font-size:3vw;
+    text-shadow: 2px 2px 2px #000000;
+}
+h1{
+    text-align:center;
+    padding-top:3%;
+    text-transform:uppercase;
+}
+
+#hores_tiles{
+    overflow: hidden;
+    width: 80%;
+    margin-left: 10%;
+}
+.tile{
+    width:20%;
+    transition:all ease 0.5s;
+    float:left;
+}
+.tile_img{
+    display: block;
+    margin: 0 auto;
+    width: 35%;
+    background-color: #FFD500;
+    padding: 6%;
+    border-radius: 50%;
+}
+.tile_txt{
+    width:80%;
+    text-align:center;
+    color:#3a3a3a;
+    font-family:roboto;
+    padding-left:10%;
+    padding-right:10%;
+    font-size:1.1vw;
+    margin-top:9%;
+    padding-bottom:5%;
+    min-height: 15%;
+}
+#hores_posts{
+    margin-top: 3%;
+}
+.odd{
+    padding-left: 10%;
+    background-color: #F9F8F6;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    overflow:hidden;
+}
+.odd .content_blok{
+    width: 40%;
+    float: left;
+    margin-right: 5%;
+}
+.odd .content_title{
+    font-family: robotoBold;
+    font-size: 1.5vw;
+}
+.odd .content_text{
+    font-family: roboto;
+    font-size: 0.8vw;
+    text-align: justify;
+    text-align-last:left;
+    margin-top:1%;
+}
+.odd .content_img{
+    width: 40%;
+    float: left;
+}
+.even{
+    padding-left: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    overflow:hidden;
+}
+.even .content_blok{
+    width: 40%;
+    float: right;
+    margin-right: 15%;
+}
+.even .content_title{
+    font-family: robotoBold;
+    font-size: 1.5vw;
+}
+.even .content_text{
+    font-family: roboto;
+    font-size: 0.8vw;
+    text-align: justify;
+    text-align-last:left;
+    margin-top:1%;
+}
+.even .content_img{
+    width: 40%;
+    float: left;
+}
+.dark-bg{
+    background-color:#F2F0EB;
+}
+.functions_wrapper{
+    width:80%;
+    margin:0 auto;
+    overflow:hidden;
+}
+.function{
+    width:20%;
+    float:left;
+    position:relative;
+    margin-bottom:2%;
+}
+.function_img{
+    display:block;
+    width: 65%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 13px;
+    margin-bottom: 4%;
+    cursor:pointer;
+}
+.function_txt{
+    font-weight: bold;
+    text-align:center;
+}
+.function_content{
+    display:none;
+    margin-top: 2%;
+    background: white;
+    border-radius: 5px;
+    padding: 5%;
+    margin-right: 5%;
+    text-align: justify;
+}
+#modules{
+    width:80%;
+    margin-left:10%;
+}
+.module_wrapper{
+    overflow:hidden;
+}
+.module{
+    width:20%;
+    float:left;
+    margin-bottom: 2%;
+}
+.module_img{
+    width:65%;
+    display:block;
+    margin:0 auto;
+}
+.module_name{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+}
+.module_content{
+    margin-top: 2%;
+    text-align: justify;
+    text-align-last:center;
+}

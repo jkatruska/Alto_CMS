@@ -40,12 +40,26 @@ CREATE TABLE `customers` (
   `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `image` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `customers` */
 
 insert  into `customers`(`id`,`name`,`image`) values 
 (2,'Boboty','admin/img/upload/DSC5368.jpg');
+
+/*Table structure for table `functions` */
+
+DROP TABLE IF EXISTS `functions`;
+
+CREATE TABLE `functions` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `text` text COLLATE utf8_unicode_ci NOT NULL,
+  `image` text COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Data for the table `functions` */
 
 /*Table structure for table `groups` */
 
@@ -64,6 +78,20 @@ insert  into `groups`(`id`,`name`,`permissions`) values
 (1,'Standard user',NULL),
 (2,'Administrator','{\"admin\":1}');
 
+/*Table structure for table `modules` */
+
+DROP TABLE IF EXISTS `modules`;
+
+CREATE TABLE `modules` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `content` text COLLATE utf8_unicode_ci,
+  `image` text COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Data for the table `modules` */
+
 /*Table structure for table `notifications` */
 
 DROP TABLE IF EXISTS `notifications`;
@@ -72,15 +100,9 @@ CREATE TABLE `notifications` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `notifications` */
-
-insert  into `notifications`(`id`,`content`) values 
-(1,'Text ƒç√≠slo jedna'),
-(2,''),
-(3,''),
-(4,'bs');
 
 /*Table structure for table `posts` */
 
@@ -93,12 +115,9 @@ CREATE TABLE `posts` (
   `category` int(11) NOT NULL,
   `image` varchar(80) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 /*Data for the table `posts` */
-
-insert  into `posts`(`id`,`title`,`content`,`category`,`image`) values 
-(1,'text','obr√°zok upravi≈•',0,'admin/img/upload/foodman.jpg');
 
 /*Table structure for table `posts_categories` */
 
@@ -130,7 +149,7 @@ CREATE TABLE `products` (
   `pro` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `category_id` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `products` */
 
@@ -142,14 +161,13 @@ CREATE TABLE `products_categories` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 /*Data for the table `products_categories` */
 
 insert  into `products_categories`(`id`,`name`) values 
 (1,'Poklad≈àa'),
-(2,'Food'),
-(3,'phone');
+(2,'Food');
 
 /*Table structure for table `slideshow` */
 
@@ -161,12 +179,9 @@ CREATE TABLE `slideshow` (
   `content` text COLLATE utf8_unicode_ci,
   `image` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `slideshow` */
-
-insert  into `slideshow`(`id`,`title`,`content`,`image`) values 
-(6,'Norm√°ln√Ω text','ƒço d√°va zmysel','admin/img/upload/josrZ.jpg');
 
 /*Table structure for table `users` */
 
@@ -179,12 +194,13 @@ CREATE TABLE `users` (
   `salt` varbinary(32) DEFAULT NULL,
   `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
 /*Data for the table `users` */
 
 insert  into `users`(`id`,`username`,`password`,`salt`,`name`) values 
-(22,'strator','9e4129ea6380e50cf5bfe6462220023a4563949fbd703df66feb8ebd2b8849d6',' \\.peH£µ!gd`√≥S]ÒÉ@VQ¿˚\0–lÆê','Jozef');
+(22,'strator','9e4129ea6380e50cf5bfe6462220023a4563949fbd703df66feb8ebd2b8849d6',' \\.peH£µ!gd`√≥S]ÒÉ@VQ¿˚\0–lÆê','Jozef'),
+(23,'Admin','ae271183d3229eb724039ef3f7d645dd4c76531ed592ec1ef5ae94ce3fde2089','¢/öw2`·à8ÛkŒÏ\ZòökÙ—1¨ÒdΩ¥ªÂGò','Admin');
 
 /*Table structure for table `users_session` */
 

@@ -12,6 +12,14 @@
     <body>
         <div id="wrapper">
             <div id="jumbotron">
+                <div class="menu">
+                    <ul>
+                        <a href="#food_tiles"><li>Skladový systém FoodMan</a>
+                        <a href="#produkty"><li>Programové verzie</a>
+                        <a href="#cash_tiles"><li>Pokladňa</a>
+                        <li>Kreditný systém
+                    </ul>
+                </div>
                 <div class="jumbo_bg">
                     <img src="img/jumbotron.png">
                 </div>
@@ -122,7 +130,7 @@
                 <?php include 'products.php'; ?> 
             </div>
             <p class="main_title">Pokladňa</p>
-            <div id="food_tiles">
+            <div id="cash_tiles">
                 <div class="tile">
                             <img src="img/kasa/dotyk.svg" class="tile_img">
                         <div class="tile_txt">
@@ -184,7 +192,7 @@
                         </div>
                 </div>
             </div>
-            <div id="food_posts">
+            <div id="cash_posts">
             <?php
             $post = new Post;
             $category = '3';
@@ -210,6 +218,7 @@
             
             ?>
             </div>
-
+    <script src="jquery.js"></script>
+    <script src="features.js"></script>
     </body>
 </html>

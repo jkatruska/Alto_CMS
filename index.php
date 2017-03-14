@@ -41,25 +41,22 @@
                         <img class="m_menu_text" src="images/alto_logo.png">
                     </a>
                     <div class="topnav">
-                          <a href="#about_us">Produkty</a>
+                          <a href="#products">Produkty</a>
                           <a href="#content">Novinky</a>
                           <a href="#calendar">Kalendár seminárov</a>
                           <a href="#customers">Zákaznici</a>
                           <a href="#contact">Kontakt</a>
                     </div>
                </div>
-
-        	<div id="logo">
                 <div class="menu">
                 	<ul>
-                    	<a href="#about_us"><li>Produkty </li></a>
+                    	<a href="#products"><li>Produkty </li></a>
                         <a href="#content"><li>Novinky</li></a>
                         <a href="#calendar"><li>Kalendár seminárov</li></a>
                         <a href="#customers"><li>Zákazníci</li></a>
                         <a href="#contact"><li>Kontakt </li></a>
                     </ul>
                 </div>
-            </div>
         </div>
         <div id ="jumbotron">  
             <img src="images/slideshow_arrow.svg" class="arrow-next">
@@ -110,7 +107,7 @@
                     <p class="product_title">Reštauračný systém</p>
                     <p class="product_content">Chcete aby prevádzka Vašej reštaurácie bola výnosná, Vaši zákazníci odchádzali spokojní a opäť sa k Vám vracali?<br>  
 Sústreďte sa na hostí a ich spokojnosť a ostatné prenechajte na spoľahlivý reštauračný systém. Dotyková pokladňa s rýchlym účtovaním, prehľadná skladová evidencia, množstvo zostáv a štatistík potrebných pre riadenie prevádzky, evidencia a plánovanie akcií, prepojenie na vernostný systém - Vám zabezpečia efektívnu prácu, dokonalý prehľad, vyššie tržby a spoľahlivú kontrolu prevádzky.</p>
-                    <a href="http://food.alto.sk">
+                    <a href="/food">
                     	<p class="product_button">Zistite viac</p>
                     </a>
                 </div>
@@ -122,7 +119,7 @@ Sústreďte sa na hostí a ich spokojnosť a ostatné prenechajte na spoľahliv�
                     <p class="product_content">Potrebujete komplexne zabezpečiť všetky činnosti 
 na recepcii a poskytnúť hosťom komfortné služby?<br> 
 Používajte kvalitný hotelový systém a majte prevádzku hotela pod kontrolou. Rezervácie ubytovania cez internet, rýchle ubytovanie hostí, vyúčtovanie poskytnutých služieb, štatistiky potrebné pre riadenie hotela - funkcie, ktoré Vám zabezpečia plnú kontrolu nad prevádzkou hotela.</p>
-                    <a href="http://hores.alto.sk">
+                    <a href="/hores">
                     	<p class="product_button">Zistite viac</p>
                     </a>
                 </div>
@@ -133,7 +130,7 @@ Používajte kvalitný hotelový systém a majte prevádzku hotela pod kontrolou
                     <p class="product_title">Kreditný systém</p>
                	    <p class="product_content">Máte športové alebo relaxačné centrum? Potrebujete predávať služby alebo tovar, sledovať čerpanie služieb a vybudovať vernostný kreditný systém?<br> 
 Používajte počítačovú registračnú pokladňu s prepojením na vernostný kreditný systém, prístupový systém a internetový rezervačný systém. Prepojenie týchto systémov do jedného celku Vám zabezpečí všetky činnosti potrebné pre prevádzku športového či relaxačného centra.</p>
-                    <a href="http://kredit.alto.sk">
+                    <a href="/food#kredit">
                     	<p class="product_button">Zistite viac</p>
                     </a>
                 </div>

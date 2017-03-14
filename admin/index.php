@@ -36,8 +36,9 @@ else{
             </ul>
             <ul class="hores">
                 <li class="header">Hores
-                <li>Články
-                <li>Semináre
+                <a href="?page=getPost.php&category=4"><li>Články</li></a>
+                <a href="?page=getFunctions.php"><li>Funkcie</li></a>
+                <a href="?page=getModules.php"><li>Moduly</li></a>
             </ul>
         </div>
         <div class="back_content">
