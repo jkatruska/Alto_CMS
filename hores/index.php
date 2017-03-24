@@ -14,7 +14,7 @@
             <div id="jumbotron">
                 <div class="menu">
                     <ul>
-                        <a href="#hores_tiles"><li>Vlastonosti systému</a>
+                        <a href="#features"><li>Vlastonosti systému</a>
                         <a href="#functions"><li>Funkcie</a>
                         <a href="#modules"><li>Moduly</a>
                     </ul>
@@ -24,7 +24,7 @@
                 </div>
                 <p class="jumboheader">Hotelový systém<br> Hores</p>
             </div>
-            <h1>Vlastnosti systému</h1>
+            <h1 id="features">Vlastnosti systému</h1>
             <div id="hores_tiles">
                 <div class="tile">
                     <img src="images/reserv_ubyt.svg" class="tile_img">

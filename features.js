@@ -27,15 +27,74 @@ $(window).scroll(function () {
 });
 
 
-$('.open_close_nav').click(function(){
+$('.mobile_menu').click(function(){
 		$('.topnav').slideToggle();
 });
 
 //oznamy
-
-if ($(".oznamy").html().length > 0) {
+if ($(".oznamy").html()) {
      $('.oznamy_bg').show();
    }  
+
    $(".close").click(function(){
 	   $('.oznamy_bg').hide();
    });
+
+var validate = false;
+$('.udaj').children('input').focusout(function(){
+  if($(this).val()== ''){
+    $(this).css("border", "solid #DA251D 0.1vw");
+    validate = false;
+    $(this).siblings('.warning').text('Pole musí byť vyplnené');
+  }
+  else{
+    $(this).css("border", "solid #29166F 0.1vw");
+    $(this).siblings().empty('.warning');
+    validate = true;
+  }
+});
+
+$('select').focusout(function(){
+  if($(this).val()== null){
+    $(this).css("border", "solid #DA251D 0.1vw");
+    validate = false;
+    $(this).siblings('.warning').text('Pole musí byť vyplnené');
+  }
+  else{
+    $(this).css("border", "solid #29166F 0.1vw");
+    $(this).siblings().empty('.warning');
+    validate = true;
+  }
+});
+
+$('.text_textarea').focusout(function(){
+  if($(this).val()== ''){
+    $(this).css("border", "solid #DA251D 0.14vw");
+    validate = false;
+    $(this).siblings('.warning').text('Pole musí byť vyplnené');
+  }
+  else{
+    $(this).css("border", "solid #29166F 0.14vw");
+    validate = true;
+    $(this).siblings().empty('.warning');
+  }
+});
+$('#mail_form').submit(function (e) {
+  e.preventDefault();
+  alert(validate);
+  if(validate === false){
+    $('.notification_mail').text('Všetky polia musia byť vyplnené!');
+  }
+  else{
+  $.ajax({
+            type: 'get',
+            url: 'email.php',
+            data: $('form').serialize(),
+            success: function () {
+              $('.notification_mail').fadeIn('slow', function(){
+                $(this).delay(5000).fadeOut('slow');
+              }).text('Úspešne odoslané');
+            }
+          });
+  }
+});

@@ -32,7 +32,7 @@ if(Input::exists()){
                       'image' => $image
                   ));
                   Session::flash('status', 'Záznam úspešne upravený');
-                  Redirect::to('?page=updatePost.php&id='.$id);
+                    Redirect::to('?page=updatePost.php&id='.$id);
               }
               catch(Exception $e){
                   die($e->getMessage());
@@ -66,3 +66,7 @@ if(Input::exists()){
     ?>
 </div>
  <?php } ?>
+  <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'text' );
+</script>

@@ -50,13 +50,6 @@ if(Input::exists()){
  <div class="insert">
     <form action ="" method="POST" enctype="multipart/form-data">
         <input type="text" name="title" placeholder="Titulok" class="insert_input" autocomplete="off"><br>
-        <!--
-        <div class="interface">
-            <img src="img/bold.svg" class="button" id="bold">
-            <img src="img/italic.svg" class="button" id="italic">
-            <img src="img/u_list.svg" class="button" id="u_list">
-        </div>
-        -->
         <textarea name="text" id="text" placeholder="Popis"></textarea><br>
         <input type="file" name="image" accept="image/*" ><br /><br>
         <input type="hidden" name="token" value="<?php echo Token::generate() ?>">
@@ -70,3 +63,7 @@ if(Input::exists()){
 </div>
 
  <?php } ?>
+ <script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'text' );
+</script>

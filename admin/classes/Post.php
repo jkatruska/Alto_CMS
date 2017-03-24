@@ -7,8 +7,7 @@
         public function create($table,$fields){
             foreach($fields as $key =>$value){
                 if($value!=NULL){
-                $value = nl2br($value);
-                $new_value = strip_tags($value,"<b><i><ul><li><br>");
+                $new_value = strip_tags($value,"<strong><em><s><p><ul><li><br>");
                 $fields[$key] = $new_value;
                 }
             }
@@ -61,7 +60,7 @@
             unlink($path);
         }
 
-        public function randomString($length) {
+        private function randomString($length) {
             $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
             $charactersLength = strlen($characters);
             $randomString = '';

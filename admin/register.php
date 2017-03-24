@@ -59,17 +59,13 @@ if(Input::exists()){
 ?>
 
 <form action ="" method="POST">
-    <label for="username">Prihlasovacie meno:</label>
-    <input type="text" name="username" id="username" value="<?php echo escape(Input::get('username'))?>">
+    <input type="text" name="username" id="username" placeholder="Použivateľské meno">
     <br>    
-    <label for="name">Skutočné meno:</label>
-    <input type="text" name="name" id="name" value="<?php echo  escape(Input::get('name'))?>">
+    <input type="text" name="name" id="name" placeholder="Skutočné meno">
     <br>
-    <label for="password">Heslo:</label>
-    <input type="password" name="password" id="password" value="">
+    <input type="password" name="password" id="password" placeholder="Heslo">
     <br>
-    <label for="password_again">Zadajte heslo znova:</label>
-    <input type="password" name="password_again" id="password_again" value="">
+    <input type="password" name="password_again" id="password_again" placeholder="Heslo znova">
     <br>
     <input type="hidden" name="token" value="<?php echo Token::generate() ?>">
     <input type="submit" value="Zaregistrovať">

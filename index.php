@@ -35,11 +35,9 @@
 
     <div class="wrapper">
 		<div id="header">
-        <a class="open_close_nav">
         	   <div class="mobile_menu">	
                         <img src="images/menu.svg" class="m_menu">
-                        <img class="m_menu_text" src="images/alto_logo.png">
-                    </a>
+                </div>
                     <div class="topnav">
                           <a href="#products">Produkty</a>
                           <a href="#content">Novinky</a>
@@ -47,7 +45,6 @@
                           <a href="#customers">Zákaznici</a>
                           <a href="#contact">Kontakt</a>
                     </div>
-               </div>
                 <div class="menu">
                 	<ul>
                     	<a href="#products"><li>Produkty </li></a>
@@ -172,53 +169,52 @@ Používajte počítačovú registračnú pokladňu s prepojením na vernostný 
         </div><!--end #customers-->
         <div id="contact">
         <?php 
-		if(isset($_POST["submit_email"])){
-			$to= "jkatruska@gmail.com";
-			$name=$_POST["name"];
-			$subject=$_POST["subject"];
-			$email=$_POST["email"];
-			$mobil=$_POST["mobil"];
-			$text=$_POST["text"];
-			$headers = 'From:' . $email . "\r\n" .
-						'Reply-To:'. $email. "\r\n" .
-						'X-Mailer: PHP/' . phpversion();
-			$message = $name . ' ' . $email . ' ' . $mobil . ' ' . $text;
-						
-			if(mail($to, $subject, $message, $headers)){
-				$message = "sprava odoslaná";	
-			}
-			else{
-				$message = "you prick";	
-			}
-		}
+
 		?>
         	<div class="contact_wrapper">
             	<p class="slide_title">Kontaktujte nás</p>
-                <?php $message='' ?>
-            	<form method="post">
+                <p class="notification_mail"></p>
+            	<form method="post" id="mail_form">
                 	<div class="udaje">
                     	<div class="udaj">
+                            <div class="warning"></div>
                             <img class="input" src="images/person.svg">
                             <input type="text" class="pole" placeholder="Meno" name="name">
                         </div>
                         <div class="udaj">
+                            <div class="warning"></div>
                             <img class="input" src="images/pencil.svg">
                             <input type="text" class="pole" placeholder="Predmet" name="subject">
                         </div>
                     	<div class="udaj">
+                            <div class="warning"></div>
                             <img class="input" src="images/mail.svg">
                             <input type="text" class="pole" placeholder="Email" name="email">
                         </div>
                         <div class="udaj">
+                            <div class="warning"></div>
                             <img class="input" src="images/mobile.svg">
                             <input type="text" class="pole" placeholder="Telefón" name="mobil">
                         </div>
+                        <div class="udaj">
+                            <div class="warning"></div>
+                            <select name="email">
+                                <option value='-1' disabled selected hidden>Komu</option>
+                                <?php
+                                    $select = new Post();
+                                    $options = $select->get('emails')->results();
+                                    foreach ($options as $option){
+                                        echo '<option value="'.$option->email.'">'.$option->name.'</option>';
+                                    }
+                                ?>
+                            </select>
+                        </div>
                     </div>
                     <div class="text_area">
-                    	<textarea class="text_textarea" placeholder="Správa" name="text"></textarea> 
+                        <div class="warning"></div>
+                    	<textarea class="text_textarea" placeholder="Správa" name="text"></textarea>
                     </div>
                     <button type="submit" class="submit" name="submit_email">Odoslať</button>
-                    <?php echo $message; ?>
                 </form>
                 <p class="slide_title">Kde nás nájdete</p>
                 <div class="svit">

@@ -11,8 +11,8 @@ require_once('core/init.php');
     $from = $_GET["from"];
     if(isset($_GET["category"])){
         $category = $_GET["category"];
+        $from .= '&category='.$category;
     }
-    $from .= '&category='.$category;
     var_dump($from);
     $image = $post->get($table, array('id','=',$id))->results();
     if($image[0]->image){
@@ -20,11 +20,12 @@ require_once('core/init.php');
         $post->deleteImage($path);
     }
     if($post->delete($table,array('id','=',$id))){
-        echo 'success';
+        Session::flash('admin_home', 'Záznam vymazaný');
     }
     else 
         echo 'fail';
-    Session::flash('admin_home', 'Záznam vymazaný');
     Redirect::to('?page='.$from);
  }
     ?>
+
+    ?page=delete.php&id=3&table=emails&from=getEmails.php

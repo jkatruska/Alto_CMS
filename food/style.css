@@ -51,6 +51,7 @@ a{
     width: 97%;
     padding-left: 3%;
     padding-top: 0.5%;
+    transition: all 0.5s ease-in-out;
 }
 .fixed_menu{
     position: fixed;
@@ -207,7 +208,7 @@ a{
     float: left;
 }
 #produkty{
-    background-color: #81CC68;
+    background-color: #dbf5d2;
     padding-top: 2%;
     padding-bottom:2%;
 }
@@ -230,16 +231,16 @@ table{
     font-size: 1.2vw;
 }
 thead tr th:nth-child(1){
-    background-color: #f1c40f;
+    background-color: #1ABC9C;
 }
 thead tr th:nth-child(3){
-    background-color: #f39c12;
+    background-color: #27AE60;
 }
 thead tr th:nth-child(5){
-    background-color: #e67e22;
+    background-color: #27AE60;
 }
 thead tr th:nth-child(7){
-    background-color: #d35400;
+    background-color: #27AE60;
 }
 tbody tr td:nth-child(1),tbody tr td:nth-child(3),tbody tr td:nth-child(5),tbody tr td:nth-child(7){
     text-align: center;

@@ -26,7 +26,7 @@ else{
                 <a href="?page=getSlideshow.php"><li>Slideshow</li></a>
                 <a href="?page=getCustomers.php"><li>Zákaznici</li></a>
                 <a href="?page=getNotifications.php"><li>Oznamy</li></a>
-
+                <a href="?page=getEmails.php"><li>E-maily</li></a>
             </ul>
             <ul class="food">
                 <li class="header">Food</li>
@@ -35,10 +35,14 @@ else{
                 <a href="?page=getProducts.php"><li>Produkty</li></a>
             </ul>
             <ul class="hores">
-                <li class="header">Hores
+                <li class="header">Hores</li>
                 <a href="?page=getPost.php&category=4"><li>Články</li></a>
                 <a href="?page=getFunctions.php"><li>Funkcie</li></a>
                 <a href="?page=getModules.php"><li>Moduly</li></a>
+            </ul>
+            <ul class="settings">
+                <li class="header">Nastavenia</li>
+                <a href="?page=register.php"><li>Pridať používateľa</li></a>
             </ul>
         </div>
         <div class="back_content">

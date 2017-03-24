@@ -38,7 +38,9 @@ if(Input::exists()){
                       'product' => Input::get('product')
                   ));
                   Session::flash('status', 'Záznam úspešne upravený');
+                  if(true){
                   Redirect::to('?page=updateCalendar.php&id='.$id);
+                  }
               }
               catch(Exception $e){
                   die($e->getMessage());
